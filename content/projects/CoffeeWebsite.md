@@ -6,7 +6,7 @@ tech:
   - HTML
   - CSS
   - Javascript
-showInProjects: true
+showInProjects: false
 ---
 
 A website created for a Coffee shop.

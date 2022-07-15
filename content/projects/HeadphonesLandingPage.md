@@ -7,7 +7,7 @@ tech:
   - HTML
   - CSS
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 A landing page created using React for headphones.

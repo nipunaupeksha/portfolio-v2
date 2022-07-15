@@ -8,7 +8,7 @@ tech:
   - CSS
   - JS
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
 A website for a furniture shop.

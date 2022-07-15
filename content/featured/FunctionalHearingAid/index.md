@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '2'
 title: 'Prototyping a Functional Hearing Aid'
 cover: 'demo.png'
 github: 'https://github.com/nipunaupeksha/codecomposer-codes-fyp'

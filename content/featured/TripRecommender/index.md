@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '1'
 title: 'Trip Recommender'
 cover: 'demo.png'
 github: 'https://github.com/nipunaupeksha/trip-recommender-frontend'

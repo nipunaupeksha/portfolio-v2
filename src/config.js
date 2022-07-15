@@ -48,10 +48,6 @@ module.exports = {
     {
       name: 'Contact',
       url: '/#contact',
-    },
-    {
-      name: 'Pensieve',
-      url:'/pensieve'
     }
   ],
 
