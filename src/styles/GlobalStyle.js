@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${colors.navy};
     color: ${colors.slate};
     line-height: 1.3;
-    font-family: ${fonts.Calibre};
+    font-family: ${fonts.Quicksand};
     font-size: ${fontSizes.xl};
     ${media.phablet`font-size: ${fontSizes.lg};`}
 

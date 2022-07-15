@@ -34,16 +34,15 @@ const StyledArchiveLink = styled(Link)`
 `;
 const StyledGrid = styled.div`
   margin-top: 50px;
-  margin-left: 10%;
-  width: 90%;
+  width: 100%;
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 15px;
     position: relative;
     @media (max-width: 1080px) {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
   }
 `;
@@ -100,7 +99,7 @@ const StyledProjectName = styled.h5`
   color: ${colors.lightestSlate};
 `;
 const StyledProjectDescription = styled.div`
-  font-size: 17px;
+  font-size: ${fontSizes.lg};
   color: ${colors.lightSlate};
   a {
     ${mixins.inlineLink};
@@ -142,7 +141,7 @@ const Projects = ({ data }) => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
-  const GRID_LIMIT = 9;
+  const GRID_LIMIT = 6;
   const projects = data.filter(({ node }) => node);
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;

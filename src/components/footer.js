@@ -106,7 +106,7 @@ const Footer = () => {
           target="_blank"
           rel="nofollow noopener noreferrer">
           <div>
-            Nipuna Upeksha, 2022
+            Designed & Built by Nipuna Upeksha, 2022
           </div>
 
           {githubInfo.stars && githubInfo.forks && (

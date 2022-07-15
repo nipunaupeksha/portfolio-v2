@@ -2,7 +2,7 @@
 date: '2017-06-24'
 title: 'Freelance Software Develope'
 company: 'Fiverr'
-range: 'June 2017 - May 2019'
+range: 'June 2017 - May 2021'
 url: 'http://www.fiverr.com/'
 ---
 

@@ -2,20 +2,27 @@
 title: 'About Me'
 avatar: 'me.jpg'
 skills:
-  - Java Enterprise
-  - Spring MVC & Maven
+  - Java/J2EE
+  - Spring
   - Python
-  - React & React Native
+  - Node.js
+  - PHP
+  - React
+  - React Native
+  - Typescript
   - Angular
   - Ionic
-  - Node JS
   - MySQL
+interests:
+  - Identity and Access Management
+  - Enterprise Project Development
+  - Machine Learning
+  - Data Analytics
+  - Deep Learning
 ---
 
-Hello! Interestingly, I got introduced to programming after A/Ls, when I started to follow **CMJD** course at **IJSE**. After that I had the privilege of joining the most prestigious engineering university in Sri Lanka, **University of Moratuwa**, where I followed my passion in programming.
+Hi! I'm Nipuna Upeksha, and I love programming and learning new technologies. I started programming back in 2015 when I was selected to pursue my BSc. (Engineering) in **Electronics and Telecommunication Engineering specializing in Biomedical Engineering at University of Moratuwa**
 
-Fast-forward to today, I'm currently working as a Software Engineer at **WSO2.** My responsibilty includes Java/Spring based microservices development & testing. 
+Fast-forward to today, I had the privilege of working at **Sanota** as a Electronic and Software Trainee Developer, and I'm currently working as a Software Engineer at **WSO2.** My main focus these days is building highly scalable, security-oriented Identity and Access Management solutions.
 
-I also love to try new frameworks, libraries and programming languges during my leisure time and write blogs to share what I've learnt.
-
-Here is a list of the technologies that I'm familiar with!
+Here is a list of the technologies I've been using recently.

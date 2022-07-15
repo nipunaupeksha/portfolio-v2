@@ -23,12 +23,12 @@ module.exports = {
       url: 'https://www.linkedin.com/in/nipuna-upeksha/',
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/nipuna_upeksha',
+      name: 'Medium',
+      url: 'https://medium.com/@nipunaupeksha',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/nipunaupeksha',
+      name: 'Stackoverflow',
+      url: 'https://stackoverflow.com/users/5941309/nipuna-upeksha',
     },
   ],
 
@@ -49,6 +49,10 @@ module.exports = {
       name: 'Contact',
       url: '/#contact',
     },
+    {
+      name: 'Pensieve',
+      url:'/pensieve'
+    }
   ],
 
   navHeight: 100,

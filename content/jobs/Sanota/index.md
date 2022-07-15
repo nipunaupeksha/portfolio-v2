@@ -6,7 +6,7 @@ range: 'June - December 2019'
 url: 'http://www.sanota.lk/'
 ---
 
-- Introduced an innovative way of tracking AGVs using inductive sensor based system coupled with **ESP 8266, Arduino** and **trilateration.**
+- Introduced an innovative way of tracking AGVs using inductive sensor based system coupled with ESP 8266, Arduino and trilateration.
 
 - Worked with a team of three engineers to build a web based Apperal Management System.
 

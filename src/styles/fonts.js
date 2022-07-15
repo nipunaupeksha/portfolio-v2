@@ -44,6 +44,19 @@ import SFMonoSemiboldItalicTTF from '@fonts/SFMono/SFMono-SemiboldItalic.ttf';
 import SFMonoSemiboldItalicWOFF from '@fonts/SFMono/SFMono-SemiboldItalic.woff';
 import SFMonoSemiboldItalicWOFF2 from '@fonts/SFMono/SFMono-SemiboldItalic.woff2';
 
+import QuicksandBoldWoff from '@fonts/Quicksand/Quicksand-Bold-700.woff';
+import QuicksandBoldTTF from '@fonts/Quicksand/Quicksand-Bold-700.ttf';
+import QuicksandLightWoff from '@fonts/Quicksand/Quicksand-Light-300.woff';
+import QuicksandLightTTF from '@fonts/Quicksand/Quicksand-Light-300.ttf';
+import QuicksandMediumWoff from '@fonts/Quicksand/Quicksand-Medium-500.woff';
+import QuicksandMediumTTF from '@fonts/Quicksand/Quicksand-Medium-500.ttf';
+import QuicksandRegularWoff from '@fonts/Quicksand/Quicksand-Regular-400.woff';
+import QuicksnadRegularTTF from '@fonts/Quicksand/Quicksand-Regular-400.ttf';
+import QuicksandBoldWoff2 from '@fonts/Quicksand/Quicksand-Bold-700.woff2';
+import QuicksandLightWoff2 from '@fonts/Quicksand/Quicksand-Light-300.woff2';
+import QuicksandMediumWoff2 from '@fonts/Quicksand/Quicksand-Medium-500.woff2';
+import QuicksandRegularWoff2 from '@fonts/Quicksand/Quicksand-Regular-400.woff2';
+
 const FontFaces = css`
   @font-face {
     font-family: 'Calibre';
@@ -149,6 +162,38 @@ const FontFaces = css`
       url(${SFMonoSemiboldItalicTTF}) format('truetype');
     font-weight: 600;
     font-style: italic;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(${QuicksandRegularWoff}) format('woff'), 
+      url(${QuicksandRegularWoff2}) format('woff2'),
+      url(${QuicksnadRegularTTF}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(${QuicksandMediumWoff}) format('woff'),
+      url(${QuicksandMediumWoff2}) format('woff2'),
+      url(${QuicksandMediumTTF}) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(${QuicksandLightWoff}) format('woff'),
+      url(${QuicksandLightWoff2}) format('woff2'),
+      url(${QuicksandLightTTF}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(${QuicksandBoldWoff}) format('woff'),
+      url(${QuicksandBoldWoff2}) format('woff2'),
+      url(${QuicksandBoldTTF}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
   }
 `;
 

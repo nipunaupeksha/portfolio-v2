@@ -11,4 +11,6 @@ tech:
 showInProjects: true
 ---
 
-This application was created for travellers who want to find the best trip thats available for them, align with the budget, the accomodation, etc.
+Travelling is one of the most wondurful things that people can enjoy in their life. But nowadays people are quite hectic with their lives and selecing an ideal place to travel despite their busy schedule is something that most people ponder quite sometime. And selecting a location is least of their worries, since people have to  reconsider their choices owing to various factors like budget and accomodation.
+
+The trip recommender app is an ideal way of selecting a trip by considering all of those factors. The front-end of this mobile application was developed using Ionic framework incorporating with Typescript. And the back-end of thos application was developed using Node.js and express while using MySQL as the database.

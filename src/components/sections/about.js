@@ -47,11 +47,35 @@ const Skill = styled.li`
     line-height: 12px;
   }
 `;
+const InterestsContainer = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  overflow: hidden;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+`;
+const Interest = styled.li`
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.smish};
+  color: ${colors.green};
+  &:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: ${colors.green};
+    font-size: ${fontSizes.sm};
+    line-height: 12px;
+  }
+`;
 const StyledPic = styled.div`
   position: relative;
   width: 40%;
   max-width: 300px;
-  margin-left: 60px;
+  margin-right: 60px;
   ${media.tablet`margin: 60px auto 0;`};
   ${media.phablet`width: 70%;`};
   a {
@@ -114,7 +138,7 @@ const StyledAvatarLink = styled.a`
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
-  const { title, skills, avatar } = frontmatter;
+  const { title, skills, interests, avatar } = frontmatter;
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
@@ -127,6 +151,12 @@ const About = ({ data }) => {
           <SkillsContainer>
             {skills && skills.map((skill, i) => <Skill key={i}>{skill}</Skill>)}
           </SkillsContainer>
+        <div>
+          <p style={{marginTop:'2vh'}}>And following are the areas that I'm interested in learning.</p>
+        </div>
+          <InterestsContainer>
+            {interests && interests.map((interest, i) => <Interest key={i}>{interest}</Interest>)}
+          </InterestsContainer>
         </StyledContent>
         <StyledPic>
           <StyledAvatarLink href={github}>

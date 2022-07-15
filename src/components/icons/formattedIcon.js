@@ -8,6 +8,8 @@ import {
   IconFork,
   IconGitHub,
   IconInstagram,
+  IconMedium,
+  IconStackoverflow,
   IconLinkedin,
   IconLoader,
   IconLocation,
@@ -50,6 +52,10 @@ const FormattedIcon = ({ name }) => {
       return <IconTwitter />;
     case 'Zap':
       return <IconZap />;
+    case 'Medium':
+      return <IconMedium/>;
+    case 'Stackoverflow':
+      return <IconStackoverflow/>;
     default:
       return <IconExternal />;
   }

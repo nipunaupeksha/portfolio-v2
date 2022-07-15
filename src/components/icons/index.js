@@ -3,6 +3,8 @@ export { default as IconCodepen } from './codepen';
 export { default as IconExternal } from './external';
 export { default as IconFolder } from './folder';
 export { default as IconFork } from './fork';
+export { default as IconMedium } from './medium';
+export { default as IconStackoverflow } from './stackoverflow';
 export { default as FormattedIcon } from './formattedIcon';
 export { default as IconGitHub } from './github';
 export { default as IconInstagram } from './instagram';
