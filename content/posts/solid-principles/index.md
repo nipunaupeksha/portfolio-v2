@@ -19,11 +19,11 @@ When building performant, versatile software, it is important to follow a thorou
 - Interface Segregation Principle
 - Dependency Inversion Principle
 
-In this article, we will try to understand what those principles are and how we can use them to implement performant code.
+In this article, we will try to understand what those principles are and how we can use them to implement performant code. 
 
 ### Single Responsibility Principle
 
-The single responsibility principle states that, each class should have only sole purpose and not be filled with excessive functionality. Let's assume that we have a Java class named `AreaCalculator` with one method to find the area of a shape. And if we are going to add several methods like printing the area of the shape as a JSON object or as a CSV to that class, then that class is not doing the single purpose that it is intended to do. So, that is a violation of single responsibility principle. 
+The single responsibility principle states that, each class should have only sole purpose and not be filled with excessive functionality. Let's assume that we have a Java class named `AreaCalculator` with one method to find the area of a shape. And if we are going to add several methods like printing the area of the shape as a JSON object or as a CSV to that class, then that class is not doing the single purpose that it is intended to do, thus violating the single responsibility principle. 
 
 So, how can we fix this? We can create another class named `PrintArea` to add various printing methods.
 
