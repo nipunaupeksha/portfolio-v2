@@ -117,6 +117,9 @@ const PrismStyles = css`
   .gatsby-highlight pre[class='language-jsx']::before {
     content: 'jsx';
   }
+  .gatsby-highlight pre[class='language-java']::before {
+    content: 'Java';
+  }
   .gatsby-highlight pre[class='language-graphql']::before {
     content: 'GraphQL';
   }
@@ -132,11 +135,17 @@ const PrismStyles = css`
   .gatsby-highlight pre[class='language-shell']::before {
     content: 'shell';
   }
+  .gatsby-highlight pre[class='language-formula']::before {
+    content: 'formula';
+  }
   .gatsby-highlight pre[class='language-sh']::before {
     content: 'sh';
   }
   .gatsby-highlight pre[class='language-bash']::before {
     content: 'bash';
+  }
+  .gatsby-highlight pre[class='language-xml']::before {
+    content: 'xml';
   }
   .gatsby-highlight pre[class='language-yaml']::before {
     content: 'yaml';
