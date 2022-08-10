@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-pensieve-tags-js",
     "path": "/pensieve/tags/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Nipuna Upeksha | Software Engineer | Biomedical Enthusiast"}},"allMarkdownRemark":{"group":[{"fieldValue":"Java","totalCount":1},{"fieldValue":"SOLID","totalCount":1}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Nipuna Upeksha | Software Engineer | Biomedical Enthusiast"}},"allMarkdownRemark":{"group":[{"fieldValue":"DSA","totalCount":5},{"fieldValue":"Java","totalCount":6},{"fieldValue":"SOLID","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": ["3115057458"]}
