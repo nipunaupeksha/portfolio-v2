@@ -1,6 +1,6 @@
 ---
 title: LeetCode 20 - Valid Parentheses
-description: Solution for LeetCode Problem 20
+description: Solution to LeetCode Problem 20
 date: '2022-08-09'
 draft: false
 slug: '/pensieve/leetcode-0020'
@@ -32,7 +32,7 @@ Input: s = "(]"
 Output: false
 ```
 
-**Constraints**
+**Constraints:**
 - `1 <= s.length <= 10⁴`
 - `s` consists of parentheses only `()[]{}`
 

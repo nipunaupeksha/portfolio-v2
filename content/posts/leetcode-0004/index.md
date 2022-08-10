@@ -1,6 +1,6 @@
 ---
 title: LeetCode 4 - Median of two sorted arrays
-description: Solution for LeetCode Problem 4
+description: Solution to LeetCode Problem 4
 date: '2022-08-09'
 draft: false
 slug: '/pensieve/leetcode-0004'
@@ -27,7 +27,7 @@ Output: 2.50000
 Explanation: merged array = [1,2,3,4] and median is (2 + 3)/2 = 2.5.
 ```
 
-**Constraints**
+**Constraints:**
 - `nums1.length == m`
 - `nums2.length == n`
 - `0 <= m <= 1000`

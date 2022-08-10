@@ -1,6 +1,6 @@
 ---
 title: LeetCode 2 - Add Two Numbers
-description: Solution for LeetCode Problem 2
+description: Solution to LeetCode Problem 2
 date: '2022-08-09'
 draft: false
 slug: '/pensieve/leetcode-0002'
@@ -33,7 +33,7 @@ Input: l1 = [9,9,9,9,9,9,9] l2 = [9,9,9,9]
 Output: [8,9,9,9,0,0,0,1]
 ```
 
-**Constraints**
+**Constraints:**
 - The number of nodes in each linked list in the range `[1,100]`.
 - `0 <= Node.val <= 9`
 - It is guaranteed that the list represents a number that does not have leading zeros.

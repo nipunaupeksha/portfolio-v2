@@ -1,6 +1,6 @@
 ---
 title: LeetCode 3 - Longest Substring Without Repeating Characters
-description: Solution for LeetCode Problem 3
+description: Solution to LeetCode Problem 3
 date: '2022-08-09'
 draft: false
 slug: '/pensieve/leetcode-0003'
@@ -31,7 +31,7 @@ Output: 3
 Explanation: The answer is "wke", with the length of 3. Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 ```
 
-**Constaints**
+**Constaints:**
 - `0 <= s.length <= 5 * 10⁴`
 - `s` consists of English letters, digits, symbols and spaces.
 

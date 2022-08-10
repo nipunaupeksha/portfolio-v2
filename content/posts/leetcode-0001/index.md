@@ -1,6 +1,6 @@
 ---
 title: LeetCode 1 - Two Sum
-description: Solution for LeetCode Problem 1
+description: Solution to LeetCode Problem 1
 date: '2022-08-09'
 draft: false
 slug: '/pensieve/leetcode-0001'
@@ -30,7 +30,7 @@ Output: [1,2]
 Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
-**Constraints**
+**Constraints:**
 - `2 <= nums.length <= 10⁴`
 - `-10⁹ <= nums[i] <= 10⁹`
 - `-10⁹ <= target <= 10⁹`
