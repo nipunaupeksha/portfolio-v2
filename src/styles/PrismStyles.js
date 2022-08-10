@@ -141,6 +141,9 @@ const PrismStyles = css`
   .gatsby-highlight pre[class='language-sh']::before {
     content: 'sh';
   }
+  .gatsby-highlight pre[class='language-example']::before {
+    content: 'example';
+  }
   .gatsby-highlight pre[class='language-bash']::before {
     content: 'bash';
   }
