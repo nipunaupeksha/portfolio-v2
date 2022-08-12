@@ -3,7 +3,7 @@ title: LeetCode 167 - Two Sum II - Input Array is Sorted
 description: Solution to LeetCode Problem 167
 date: '2022-08-10'
 draft: false
-slug: '/pensieve/leetcode-0020'
+slug: '/pensieve/leetcode-00167'
 tags:
   - DSA
   - Java
