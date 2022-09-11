@@ -135,6 +135,9 @@ const PrismStyles = css`
   .gatsby-highlight pre[class='language-shell']::before {
     content: 'shell';
   }
+  .gatsby-highlight pre[class='language-gitignore']::before {
+    content: '.gitignore';
+  }
   .gatsby-highlight pre[class='language-properties']::before {
     content: 'properties';
   }
