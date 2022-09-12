@@ -333,6 +333,69 @@ class Solution{
 }
 ```
 
+## Question 42 - Trapping Rain Water
+
+```java
+class Solution{
+    public int trap(int[] height){
+        int n = height.length;
+        int max = 0;
+        for(int i = 0; i < n; i++){
+            if(height[max] < height[i]){
+                max = i;
+            }
+        }
+        int sum = 0;
+        int LMax  = 0;
+        for(int i = 0;i < max;i++){
+            if(height[LMax] < height[i]){
+                LMax = i;
+            }
+            sum += Math.min(height[LMax], height[max]) - height[i];
+        }
+
+        int RMax = n - 1;
+        for(int i = n - 1; i > max; i--){
+            if(height[RMax] < height[i]){
+                RMax = i;
+            }
+            sum += Math.min(height[LMax], height[max]) - height[i];
+        }
+        return sum;
+    }
+}
+```
+
+## Question 75 - Sort Colors
+
+```java
+class Solution{
+    public void sortColors(int[] nums){
+        int n = nums.length;
+        int L = 0, R = n - 1, cur = 0;
+        while(cur <= R){
+            if(nums[cur] == 2){
+                swap(nums, cur, R);
+                R--;
+            }else if(nums[cur]==1){
+                cur++;
+            }else{
+                swap(nums, cur, L);
+                L++;
+                cur++;
+            }
+        }
+    }
+
+    private void swap(int[]nums, int p1, int p2){
+
+        int temp = nums[p1];
+        nums[p1] = nums[p2];
+        nums[p2] = temp;
+    }
+}
+```
+
 ## Question 80 - Remove Duplicates from Sorted Array II
 
 ```java
@@ -356,6 +419,42 @@ class Solution{
             R++;
         }
         return L+1;
+    }
+}
+```
+
+## Remove Duplicates from Sorted List II
+
+```java
+/**
+* Definition for singly-linked list.
+*public class ListNode{
+*    int val; 
+*    ListNode next;
+*    ListNode(){}
+*    ListNode(int val){this.val = val};
+*    ListNode(int val, ListNode next){this.val = val; this.next = next;}
+*}
+*/
+
+class Solution{
+    public ListNode deleteDuplicates(ListNode head){
+        if(head == null || head.next == null) return head;
+        ListNode dummy = new ListNode();
+        dummy.next = head;
+        ListNode pre = dummy, cur = head;
+        while(cur != null){
+            if(cur.next != null && cur.val == cur.next.val){
+                while(cur.next != null && cur.val == cur.next.val){
+                    cur = cur.next;
+                }
+                pre.next = cur.next;
+            }else{
+                pre = cur;
+            }
+            cur = cur.next;
+        }
+        return dummy.next;
     }
 }
 ```
@@ -432,6 +531,35 @@ class Solution {
                 nums[L] = temp;
             }
         }
+    }
+}
+```
+
+## Question 763 - Partition Labels
+
+```java
+class Solution{
+    public List<Integer> partitionLabels(String s){
+        char[] arr = s.toCharArray();
+        int[] cache = new int[128];
+        for(int i = 0;i < arr.length;i++){
+            char cur = arr[i];
+            cache[cur] = i;
+        }
+        int L = 0, R = 0, index = 0;
+        List<Integer> res = new LinkedList<>();
+        while(index < arr.length){
+            char cur = arr[index];
+            R = Math.max(R, cache[cur]);
+            if(R==index){
+                int size = R - L + 1;
+                res.add(size);
+                R++;
+                L = R;
+            }
+            index++;
+        }
+        return res;
     }
 }
 ```

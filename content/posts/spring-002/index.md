@@ -1706,6 +1706,261 @@ Now if you go to `localhost:8080/vets` you can observe the following.
 
 ## Step 17 - Auto Generate Map IDs
 
+To make the ID autogenerate we can implement the following in the `AbstractMapService` class and refactor the `OwnerServiceMap`, `PetServiceMap` and `VetServiceMap`.
+
+```java:title=./pet-clinic-data/src/main/java/com/flt/petclinic/services/map/AbstractMapService.java
+package com.flt.petclinic.services.map;
+
+import com.flt.petclinic.model.BaseEntity;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Set;
+
+public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
+
+    protected Map<Long, T> map = new HashMap<>();
+
+    Set<T> findAll() {
+
+        return new HashSet<>(map.values());
+    }
+
+    T findById(ID id) {
+
+        return map.get(id);
+    }
+
+    T save(T object) {
+
+        if (object != null) {
+            if (object.getId() == null) {
+                object.setId(getNextId());
+            }
+            map.put(object.getId(), object);
+        }
+        return object;
+    }
+
+    void deleteById(ID id) {
+
+        map.remove(id);
+    }
+
+    void delete(T object) {
+
+        map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+    }
+
+    private Long getNextId() {
+
+        Long nextId = null;
+        try {
+            nextId = Collections.max(map.keySet()) + 1;
+        } catch (NoSuchElementException e) {
+            nextId = 1L;
+        }
+        return nextId;
+    }
+}
+```
+
+```java:title=./pet-clinic-data/src/main/java/com/flt/petclinic/services/map/OwnerServiceMap.java
+package com.flt.petclinic.services.map;
+
+import com.flt.petclinic.model.Owner;
+import com.flt.petclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
+
+import java.util.Set;
+
+@Service
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+
+    @Override
+    public Set<Owner> findAll() {
+
+        return super.findAll();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
+    }
+
+    @Override
+    public void delete(Owner object) {
+
+    }
+
+    @Override
+    public Owner save(Owner object) {
+
+        return super.save(object);
+    }
+
+    @Override
+    public Owner findById(Long id) {
+
+        return super.findById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+
+        return null;
+    }
+}
+```
+
+```java:title=./pet-clinic-data/src/main/java/com/flt/petclinic/services/map/PetServiceMap.java
+package com.flt.petclinic.services.map;
+
+import com.flt.petclinic.model.Pet;
+import com.flt.petclinic.services.PetService;
+import org.springframework.stereotype.Service;
+
+import java.util.Set;
+
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+
+    @Override
+    public Set<Pet> findAll() {
+
+        return super.findAll();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
+        super.deleteById(id);
+    }
+
+    @Override
+    public void delete(Pet object) {
+
+        super.delete(object);
+    }
+
+    @Override
+    public Pet save(Pet object) {
+
+        return super.save(object);
+    }
+
+    @Override
+    public Pet findById(Long id) {
+
+        return super.findById(id);
+    }
+}
+```
+
+```java:title=./pet-clinic-data/src/main/java/com/flt/petclinic/services/map/VetServiceMap.java
+package com.flt.petclinic.services.map;
+
+import com.flt.petclinic.model.Vet;
+import com.flt.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
+
+import java.util.Set;
+
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+
+    @Override
+    public Set<Vet> findAll() {
+
+        return super.findAll();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
+        super.deleteById(id);
+    }
+
+    @Override
+    public void delete(Vet object) {
+
+        super.delete(object);
+    }
+
+    @Override
+    public Vet save(Vet object) {
+
+        return super.save(object);
+    }
+
+    @Override
+    public Vet findById(Long id) {
+
+        return super.findById(id);
+    }
+}
+```
+
+In addition, we can refactor out `DataLoader` class as well. 
+
+```java:title=./pet-clinic-web/src/main/java/com/flt/petclinic/bootstrap/DataLoader.java
+package com.flt.petclinic.bootstrap;
+
+import com.flt.petclinic.model.Owner;
+import com.flt.petclinic.model.Vet;
+import com.flt.petclinic.services.OwnerService;
+import com.flt.petclinic.services.VetService;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class DataLoader implements CommandLineRunner {
+
+    private final OwnerService ownerService;
+    private final VetService vetService;
+
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+
+        this.ownerService = ownerService;
+        this.vetService = vetService;
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        Owner owner1 = new Owner();
+        owner1.setFirstName("Harry");
+        owner1.setLastName("Potter");
+
+        ownerService.save(owner1);
+
+        Owner owner2 = new Owner();
+        owner2.setFirstName("Ron");
+        owner2.setLastName("Weasley");
+
+        ownerService.save(owner2);
+
+        System.out.println("Loaded Owners....");
+
+        Vet vet1 = new Vet();
+        vet1.setFirstName("Hermione");
+        vet1.setLastName("Granger");
+
+        vetService.save(vet1);
+
+        Vet vet2 = new Vet();
+        vet2.setFirstName("Fred");
+        vet2.setLastName("Weasley");
+
+        vetService.save(vet2);
+
+        System.out.println("Loaded Vets....");
+    }
+}
+```
 
 
 ## References
